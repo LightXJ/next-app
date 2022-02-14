@@ -1,0 +1,11 @@
+.container {
+  padding: 20px;
+}
+
+.imgWrap {
+  position: relative;
+  margin-top: 10px;
+  width: 400px;
+  height: 250px;
+  border: 1px solid #cecece;
+}

@@ -1,0 +1,16 @@
+.pageContainer {
+  padding: 20px;
+}
+
+.demoContainer {
+  padding: 20px;
+  border: 2px dashed #ddd;
+}
+
+.code {
+  background: #fafafa;
+  color: black;
+  display: block;
+  padding: 10px;
+  word-break: break-all;
+}

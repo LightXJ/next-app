@@ -1,0 +1,13 @@
+{
+  "extends": "next/core-web-vitals",
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "plugins": ["react", "react-hooks"],
+  "rules": {
+    "no-unused-vars": "error",
+    "no-undef": "error"
+  }
+}
