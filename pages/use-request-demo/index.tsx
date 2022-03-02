@@ -44,18 +44,20 @@ function App() {
         <button type="submit">Search</button>
       </form>
 
-      {error && <div>Something went wrong ...</div>}
-
-      {loading ? (
-        <div>Loading ...</div>
-      ) : (
-        <ul>
-          {data?.hits?.map(item => (
-            <li key={item.objectID}>
-              <a href={item.url}>{item.title}</a>
-            </li>
-          ))}
-        </ul>
+      {error ? <div>Something went wrong ...</div> : (
+        <>
+          {loading ? (
+            <div>Loading ...</div>
+          ) : (
+            <ul>
+              {data?.hits?.map(item => (
+                <li key={item.objectID}>
+                  <a href={item.url}>{item.title}</a>
+                </li>
+              ))}
+            </ul>
+          )}
+        </>
       )}
     </>
   );

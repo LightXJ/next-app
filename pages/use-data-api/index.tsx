@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 // import useDataApi from '@/components/hooks/useDataApi';
-// import useReducerDataApi from '@/components/hooks/useReducerDataApi';
-import { useRequest } from 'ahooks';
+import useReducerDataApi from '@/components/hooks/useReducerDataApi';
 
 
 function App() {
