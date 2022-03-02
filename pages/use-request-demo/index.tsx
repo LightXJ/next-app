@@ -6,7 +6,6 @@ import axios from 'axios';
 function App() {
   const [query, setQuery] = useState('redux');
 
-
   const getData = useCallback(()=>{
     return new Promise((resolve, reject)=>{
       axios(`https://hn.algolia.com/api/v1/search?query=${query}`)
@@ -19,9 +18,10 @@ function App() {
     })
   }, [query]);
 
-  const { loading, runGetData } = useRequest(getData, {
-    manual: true
+  const { loading, error, data, run: runGetData } = useRequest(getData, {
+    manual: true,
   });
+  
 
   useEffect(()=>{
     runGetData();
@@ -50,7 +50,7 @@ function App() {
         <div>Loading ...</div>
       ) : (
         <ul>
-          {data.hits.map(item => (
+          {data?.hits?.map(item => (
             <li key={item.objectID}>
               <a href={item.url}>{item.title}</a>
             </li>
