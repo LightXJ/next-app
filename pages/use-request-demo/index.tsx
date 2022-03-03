@@ -31,7 +31,7 @@ function App() {
     <>
      <form
         onSubmit={event => {
-          runGetData(query)
+          runGetData()
 
           event.preventDefault();
         }}
