@@ -1,12 +1,22 @@
 {
   "extends": [
     "eslint:recommended",
-    "next/core-web-vitals",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking"
+    "next/core-web-vitals"
   ],
   "plugins": ["@typescript-eslint"],
-  "parserOptions": {
-    "project": "./tsconfig.json"
-  }
+  "env": {
+    "es2022": true
+  },
+  "overrides": [
+    {
+      "files":  ["**/*.ts?(x)"],
+      "extends": [
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking"
+      ],
+      "parserOptions": {
+        "project": "./tsconfig.json"
+      }
+    }
+  ]
 }

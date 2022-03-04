@@ -15,7 +15,7 @@ const handler = nc({
   const form = new formidable.IncomingForm();
   
   try{
-    form.parse(req, (err, fields, files)=>{
+    form.parse(req, (err, fields)=>{
       console.log(err);
       if(!err){
         console.log('fields is', fields);

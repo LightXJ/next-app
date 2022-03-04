@@ -1,4 +1,5 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import * as React from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useRequest } from 'ahooks';
 import axios from 'axios';
 
@@ -6,7 +7,7 @@ import axios from 'axios';
 function App() {
   const [query, setQuery] = useState('redux');
 
-  const getData = useCallback(()=>{
+  const getData= useCallback(()=>{
     return new Promise((resolve, reject)=>{
       axios(`https://hn.algolia.com/api/v1/search?query=${query}`)
         .then(res=>{
