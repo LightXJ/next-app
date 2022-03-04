@@ -59,32 +59,32 @@ export default function Home() {
   }, [apiName])
 
   // 不做任何处理
-  const fetchDataNormal = useCallback(()=>{
-    setTimeout(()=>{
-      setLoading(true);
-    },0)
+  // const fetchDataNormal = useCallback(()=>{
+  //   setTimeout(()=>{
+  //     setLoading(true);
+  //   },0)
 
-    axios.post(`http://localhost:3000/api/${apiName}`, {
-      headers: {
-        'Content-Type': 'text/plain;charset=utf-8'
-        },
-        body: JSON.stringify({
-          id: 1
-        }),
-    })
-    .then(res=>{
-      return res.data
-    })
-    .then(data=>{
-      setContentData(data.name);
-    })
-    .catch(err=>{
-      console.log('err', err);
-    })
-    .finally(()=>{
-      setLoading(false);
-    })
-  }, [apiName])
+  //   axios.post(`http://localhost:3000/api/${apiName}`, {
+  //     headers: {
+  //       'Content-Type': 'text/plain;charset=utf-8'
+  //       },
+  //       body: JSON.stringify({
+  //         id: 1
+  //       }),
+  //   })
+  //   .then(res=>{
+  //     return res.data
+  //   })
+  //   .then(data=>{
+  //     setContentData(data.name);
+  //   })
+  //   .catch(err=>{
+  //     console.log('err', err);
+  //   })
+  //   .finally(()=>{
+  //     setLoading(false);
+  //   })
+  // }, [apiName]);
 
   useEffect(()=>{
     fetchDataWithAbort();
