@@ -28,7 +28,7 @@
     "tsBuildInfoFile": "./build/tscBuildFile"
   },
   "include": [
-    "**/*.d.ts"
+    "**/*",
   ],
   "exclude": []
 }
