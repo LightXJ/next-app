@@ -1,4 +1,4 @@
 module.exports = {
-  '*.{js,jsx,ts,tsx}': ["eslint --fix --max-warnings 0"],
+  '*.{js,jsx,ts,tsx}': ["eslint --fix --max-warnings 10"],
   '*.{ts,tsx}': [() => "tsc --skipLibCheck --noEmit"]
 }
