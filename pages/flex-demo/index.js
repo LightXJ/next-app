@@ -7,7 +7,7 @@ export default function Index(){
   const handleCollapse = () => {
     setCollapse(collapse=>!collapse)
   }
-  console.log(collapse)
+
   return (
     <>
     <div className={styles.container}>
@@ -19,7 +19,9 @@ export default function Index(){
 
     <div className={`${styles.pageContainer}`}>
       <div className={`${styles.leftTree} ${collapse ? styles.collapse:''}`}>
-        左侧导航栏
+        <div className={`${styles.treeContent}`}>
+          左侧导航栏
+        </div>
         <div className={`${styles.collapseBtn} ${collapse ? styles.collapse:''}`} onClick={handleCollapse}>{!collapse ? '收起': '展开'}</div>
       </div>
       <div className={`${styles.rightContent}`}>右侧内容区</div>

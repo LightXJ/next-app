@@ -30,6 +30,15 @@
   background-color: pink;
   position: relative;
   transition: width ease-in .2s;
+  .treeContent {
+    overflow: hidden;
+    background: gray;
+    color: #fff;
+    transition: all ease-in .2s;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
   .collapseBtn {
     position: absolute;
     right: 10px;
@@ -48,6 +57,9 @@
   } 
   &.collapse {
     width: 0px;
+    .treeContent {
+      overflow: hidden;
+    }
   }
 }
 
