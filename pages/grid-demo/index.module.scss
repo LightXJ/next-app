@@ -1,0 +1,40 @@
+.container {
+  margin: 60px;
+   /* 声明一个容器 */
+  display: grid;
+  background-color: lightblue;
+  /*  声明列的宽度  */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+   /*  声明行间距和列间距  */
+  grid-gap: 10px;
+  /*  声明行的高度  */
+  grid-template-rows: repeat(2, 200px);;
+  justify-content: space-between;
+  align-items: center;
+  grid-auto-rows: 50px;
+}
+.boxItem {
+  border: 1px solid #eee;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+}
+.boxOne {
+  background: #19CAAD;
+}
+.boxTwo {
+  background: #8CC7B5;
+}
+.boxThree {
+  background: #D1BA74;
+}
+.boxFour {
+  background: #BEE7E9;
+}
+.boxFive {
+  background: #E6CEAC;
+}
+.boxSix {
+  background: #ECAD9E;
+}

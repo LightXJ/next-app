@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { Tabs } from 'antd';
-import axios from 'axios';
+import axios, {CancelTokenSource} from 'axios';
 import styles from './index.module.css'
 
 
@@ -20,10 +20,10 @@ const TAB_LIST = [
 const DEFAULT_TAB = 'tab1';
 
 export default function Home() {
-  const cancelTokenRef = useRef();
+  const cancelTokenRef = useRef<CancelTokenSource>();
   const [loading, setLoading] = useState(false);
   const [contentData, setContentData] = useState('');
-  const [apiName, setApiName] = useState(TAB_LIST.find(item=>item.tabName===DEFAULT_TAB).apiName);
+  const [apiName, setApiName] = useState(TAB_LIST.find(item=>item.tabName===DEFAULT_TAB)?.apiName);
 
   // 先取消上一个tab的请求
   const fetchDataWithAbort = useCallback(()=>{
@@ -34,7 +34,10 @@ export default function Home() {
       setLoading(true);
     },0)
 
-    axios.post(`http://localhost:3000/api/${apiName}`, {
+    interface ResponseResult {
+      name: string
+    }
+    axios.post<ResponseResult>(`http://localhost:3000/api/${apiName}`, {
       headers: {
         'Content-Type': 'text/plain;charset=utf-8'
         },
@@ -44,11 +47,13 @@ export default function Home() {
     }, {
       cancelToken: cancelTokenRef.current.token
     })
-    .then(res=>{
+    .then((res)=>{
+      console.log(res);
       return res.data
     })
     .then(data=>{
-      setContentData(data.name);
+      const { name } = data;
+      setContentData(name);
     })
     .catch(err=>{
       console.log('err', err);
@@ -92,7 +97,7 @@ export default function Home() {
   }, [fetchDataWithAbort])
 
 
-  const handleSwitchTab = (apiName) => {
+  const handleSwitchTab = (apiName: string) => {
     setApiName(apiName)
     setContentData('');
   }

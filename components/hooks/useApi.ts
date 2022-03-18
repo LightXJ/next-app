@@ -5,7 +5,7 @@ type UseApiResponse = [
   {
     loading: boolean,
     data: null | object | any [],
-    error: number
+    error: any
   },
   (requestData?:any[]|object) => Promise<any>,
 ]
@@ -33,7 +33,7 @@ const useApi = ({
 }: UseApiArgs ) => {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState(defaultData || null);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState(false);
 
   const sendRequest = (requestData?: object | any[]) => {
     const requestConfig = {
