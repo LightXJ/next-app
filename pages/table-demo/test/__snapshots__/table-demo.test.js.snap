@@ -1,0 +1,285 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyComponent should render correctly in "deb" mode 1`] = `
+<div>
+  <ForwardRef(InternalTable)
+    columns={
+      Array [
+        Object {
+          "align": "left",
+          "dataIndex": "contractNumber",
+          "fixed": "left",
+          "key": "contractNumber",
+          "title": "合同编号",
+          "width": 300,
+        },
+        Object {
+          "dataIndex": "documentNumber",
+          "key": "documentNumber",
+          "title": "单据编号",
+          "width": 300,
+        },
+        Object {
+          "align": "left",
+          "dataIndex": "name",
+          "key": "name",
+          "title": "名称",
+          "width": 300,
+        },
+      ]
+    }
+    dataSource={
+      Array [
+        Object {
+          "contractNumber": "YC20200228上海浦江文化传媒有限公司",
+          "documentNumber": "HTSP2020051000200001",
+          "key": "a",
+          "name": "上海浦江文化传媒有限公司",
+        },
+        Object {
+          "contractNumber": "YC20200228",
+          "documentNumber": "HTSP2020051000200001",
+          "key": "b",
+          "name": "上海浦江文化传媒有限公司",
+        },
+        Object {
+          "contractNumber": "YC20200228",
+          "documentNumber": "HTSP2020051000200001",
+          "key": "c",
+          "name": "上海浦江文化传媒有限公司上海浦江文化传媒有限公司上海浦江文化传媒有限公司上海浦江文化传媒有限公司上海浦江文化传媒有限公司上海浦江文化传媒有限公司上海浦江文化传媒有限公司上海浦江文化传媒有限公司",
+        },
+      ]
+    }
+    rowKey="key"
+    scroll={
+      Object {
+        "x": "100%",
+      }
+    }
+  />
+  <table
+    className="tableWrap"
+  >
+    <thead>
+      <tr>
+        <th
+          key="contractNumber"
+        >
+          合同编号
+        </th>
+        <th
+          key="documentNumber"
+        >
+          单据编号
+        </th>
+        <th
+          key="name"
+        >
+          名称
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        key="a"
+      >
+        <td
+          key="contractNumber"
+        >
+          YC20200228上海浦江文化传媒有限公司
+        </td>
+        <td
+          key="documentNumber"
+        >
+          HTSP2020051000200001
+        </td>
+        <td
+          key="name"
+        >
+          上海浦江文化传媒有限公司
+        </td>
+      </tr>
+      <tr
+        key="b"
+      >
+        <td
+          key="contractNumber"
+        >
+          YC20200228
+        </td>
+        <td
+          key="documentNumber"
+        >
+          HTSP2020051000200001
+        </td>
+        <td
+          key="name"
+        >
+          上海浦江文化传媒有限公司
+        </td>
+      </tr>
+      <tr
+        key="c"
+      >
+        <td
+          key="contractNumber"
+        >
+          YC20200228
+        </td>
+        <td
+          key="documentNumber"
+        >
+          HTSP2020051000200001
+        </td>
+        <td
+          key="name"
+        >
+          上海浦江文化传媒有限公司上海浦江文化传媒有限公司上海浦江文化传媒有限公司上海浦江文化传媒有限公司上海浦江文化传媒有限公司上海浦江文化传媒有限公司上海浦江文化传媒有限公司上海浦江文化传媒有限公司
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`MyComponent should render correctly in "debug" mode 1`] = `
+<div>
+  <ForwardRef(InternalTable)
+    columns={
+      Array [
+        Object {
+          "align": "left",
+          "dataIndex": "contractNumber",
+          "fixed": "left",
+          "key": "contractNumber",
+          "title": "合同编号",
+          "width": 300,
+        },
+        Object {
+          "dataIndex": "documentNumber",
+          "key": "documentNumber",
+          "title": "单据编号",
+          "width": 300,
+        },
+        Object {
+          "align": "left",
+          "dataIndex": "name",
+          "key": "name",
+          "title": "名称",
+          "width": 300,
+        },
+      ]
+    }
+    dataSource={
+      Array [
+        Object {
+          "contractNumber": "YC20200228上海浦江文化传媒有限公司",
+          "documentNumber": "HTSP2020051000200001",
+          "key": "a",
+          "name": "上海浦江文化传媒有限公司",
+        },
+        Object {
+          "contractNumber": "YC20200228",
+          "documentNumber": "HTSP2020051000200001",
+          "key": "b",
+          "name": "上海浦江文化传媒有限公司",
+        },
+        Object {
+          "contractNumber": "YC20200228",
+          "documentNumber": "HTSP2020051000200001",
+          "key": "c",
+          "name": "上海浦江文化传媒有限公司上海浦江文化传媒有限公司上海浦江文化传媒有限公司上海浦江文化传媒有限公司上海浦江文化传媒有限公司上海浦江文化传媒有限公司上海浦江文化传媒有限公司上海浦江文化传媒有限公司",
+        },
+      ]
+    }
+    rowKey="key"
+    scroll={
+      Object {
+        "x": "100%",
+      }
+    }
+  />
+  <table
+    className="tableWrap"
+  >
+    <thead>
+      <tr>
+        <th
+          key="contractNumber"
+        >
+          合同编号
+        </th>
+        <th
+          key="documentNumber"
+        >
+          单据编号
+        </th>
+        <th
+          key="name"
+        >
+          名称
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        key="a"
+      >
+        <td
+          key="contractNumber"
+        >
+          YC20200228上海浦江文化传媒有限公司
+        </td>
+        <td
+          key="documentNumber"
+        >
+          HTSP2020051000200001
+        </td>
+        <td
+          key="name"
+        >
+          上海浦江文化传媒有限公司
+        </td>
+      </tr>
+      <tr
+        key="b"
+      >
+        <td
+          key="contractNumber"
+        >
+          YC20200228
+        </td>
+        <td
+          key="documentNumber"
+        >
+          HTSP2020051000200001
+        </td>
+        <td
+          key="name"
+        >
+          上海浦江文化传媒有限公司
+        </td>
+      </tr>
+      <tr
+        key="c"
+      >
+        <td
+          key="contractNumber"
+        >
+          YC20200228
+        </td>
+        <td
+          key="documentNumber"
+        >
+          HTSP2020051000200001
+        </td>
+        <td
+          key="name"
+        >
+          上海浦江文化传媒有限公司上海浦江文化传媒有限公司上海浦江文化传媒有限公司上海浦江文化传媒有限公司上海浦江文化传媒有限公司上海浦江文化传媒有限公司上海浦江文化传媒有限公司上海浦江文化传媒有限公司
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

@@ -11,6 +11,6 @@ module.exports = {
         source: '/download/baidu/:path*',
         destination: 'https://www.baidu.com/:path*',
       }
-    ]
+  ]
   }
 }
