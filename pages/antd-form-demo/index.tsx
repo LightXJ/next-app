@@ -8,6 +8,7 @@ const FormLayoutDemo = () => {
   const [formLayout, setFormLayout] = useState<LayoutType>('horizontal');
 
   const onFormLayoutChange = ({ layout }: { layout: LayoutType }) => {
+    console.log('valueChange')
     setFormLayout(layout);
   };
 
