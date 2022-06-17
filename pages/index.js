@@ -1,7 +1,21 @@
 import styles from '../styles/Home.module.css'
+import Link from 'next/link';
 
+const pageList = [
+  {
+    name: 'use-memo-demo',
+    desc: '这是一个useMemo的示例',
+    href: '/use-memo-demo',
+  },
+  {
+    name: 'use-memo-demo',
+    desc: '这是一个useMemo的示例',
+    href: '/use-memo-demo',
+  }
+];
 
 export default function Home() {
+  
   return (
     <div className={styles.container}>
 
@@ -10,43 +24,22 @@ export default function Home() {
           示例列表
         </h1>
 
-        <div className={styles.box}>
-          <h3>取消请求</h3>
-          <ul className={styles.grid}>
-            <li>
-              <a href="https://nextjs.org/docs" className={styles.card}>
-                <h2>Documentation &rarr;</h2>
-                <p>Find in-depth information about Next.js features and API.</p>
-              </a>
-            </li>
-            <li>
-              <a href="https://nextjs.org/learn" className={styles.card}>
-                <h2>Learn &rarr;</h2>
-                <p>Learn about Next.js in an interactive course with quizzes!</p>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://github.com/vercel/next.js/tree/master/examples"
-                className={styles.card}
-              >
-                <h2>Examples &rarr;</h2>
-                <p>Discover and deploy boilerplate example Next.js projects.</p>
-              </a>
-
-            </li>
-            <li>
-              <a
-                href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-                className={styles.card}
-              >
-                <h2>Deploy &rarr;</h2>
-                <p>
-                  Instantly deploy your Next.js site to a public URL with Vercel.
-                </p>
-              </a>
-            </li>
-          </ul>
+        <div>
+          <ul>
+              {
+                pageList.map((curPage, index)=>{
+                  return (
+                  <li key={index} className={styles.box}>
+                    <div>组件名称：{curPage.name}</div>
+                    <div>描述：{curPage.desc}</div>
+                    <Link href={curPage.href}>
+                      <a style={{ color: 'blue'}}>前往</a>
+                    </Link>
+                  </li>
+                )
+              })
+            }
+        </ul>
         </div>
         
       </main>
