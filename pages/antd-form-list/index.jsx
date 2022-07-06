@@ -131,6 +131,7 @@ export default function Demo(){
 
 
   const handleAddTag = () => {
+    
     console.log('active', activeKey);
     const [outerRuleName, innerRuleName] = activeKey.split('-');
 
@@ -139,10 +140,14 @@ export default function Demo(){
 
     let matchObj = formValues.outerRuleList[outerRuleName].innerRuleList[innerRuleName]
     let curTag = { tag: Math.random() }
+    let tagDetail = {
+      tagName: `tagName-${Math.random()}`
+    }
     if(matchObj.singleRuleList && matchObj.singleRuleList.length>0){
-      matchObj.singleRuleList.push({...curTag})
+      // 如果有数据的话，插入成为第二个
+      matchObj.singleRuleList.splice(1, 0, {...curTag, ...tagDetail})
     }else{
-      matchObj.singleRuleList = [{...curTag}];
+      matchObj.singleRuleList = [{...curTag, ...tagDetail}];
     }
     console.log('formValues', formValues);
     form.setFieldsValue(formValues)
