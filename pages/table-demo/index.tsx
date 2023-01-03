@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { Table } from 'antd';
 import { ColumnsType } from 'antd/es/table';
 import styles from './index.module.scss';
@@ -59,7 +61,7 @@ export default function Index(){
             return (
               <tr key={dataItem.key}>
                 {columns.map(cItem=>{
-                  const curKey = cItem.dataIndex || columns.key;
+                  const curKey = cItem?.dataIndex || columns?.key;
                   return (
                     <td key={cItem.key}>{dataItem[curKey]}</td>
                   )

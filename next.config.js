@@ -1,11 +1,7 @@
 // @ts-check
 
 module.exports = {
-  experimental: {
-    runtime: 'nodejs',
-    serverComponents: true,
-  },
-  reactStrictMode: true,
+  reactStrictMode: false,
   env: {
     ROOT: __dirname
   },

@@ -25,7 +25,9 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "tsBuildInfoFile": "./build/tscBuildFile"
+    "tsBuildInfoFile": "./build/tscBuildFile",
+    "noEmitOnError": false,
+    "noImplicitAny": false,
   },
   "include": [
     "**/*",
