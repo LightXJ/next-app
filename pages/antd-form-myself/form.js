@@ -1,6 +1,8 @@
 import React, { useRef, useMemo } from 'react';
 import { FormStore } from './form-store';
-import { FieldContext } from './filed-context';
+import {Context as FieldContext} from './field-context';
+
+console.log('FieldContext', FieldContext);
 
 const Form = (props)=>{
   const { initialValues, children } = props;
