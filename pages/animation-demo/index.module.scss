@@ -1,0 +1,12 @@
+.animation-demo-page {
+  background: #fff;
+  padding: 50px;
+  .item-wrap {
+    width: 770px;
+    height: 608px;
+    background-size: cover;
+    &.active {
+      width: 100px;
+    }
+  }
+}

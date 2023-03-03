@@ -12,5 +12,5 @@ module.exports = {
         destination: 'https://www.baidu.com/:path*',
       }
   ]
-  }
+  },
 }
