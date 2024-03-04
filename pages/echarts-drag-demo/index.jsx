@@ -62,6 +62,17 @@ const EchartsDragDemo = ()=>{
         top: '8%',
         bottom: '12%'
       },
+      tooltip: {
+        // triggerOn: 'none',
+        formatter: function(params) {
+          return (
+            'X: ' +
+            params.seriesName +
+            '<br>Y: ' +
+            params.data.value
+          );
+        }
+      },
       xAxis: {
         type: 'category',
         axisLine: { onZero: false },
@@ -89,12 +100,18 @@ const EchartsDragDemo = ()=>{
             shape: {
               cx: 0,
               cy: 0,
-              r: 10
+              r: 20
             },
-            invisible: true,
+            invisible: false,
             draggable: true,
             ondrag: function (dx, dy) {
               onPointDragging(dataIndex, [this.x, this.y]);
+            },
+            onmousemove: function () {
+              showTooltip(dataIndex);
+            },
+            onmouseout: function () {
+              hideTooltip(dataIndex);
             },
             z: 100
           };
@@ -150,9 +167,9 @@ const EchartsDragDemo = ()=>{
             shape: {
               cx: 0,
               cy: 0,
-              r: 10
+              r: 20
             },
-            invisible: true,
+            invisible: false,
             draggable: true,
             ondrag: function (dx, dy) {
               onPointDragging(dataIndex, [this.x, this.y]);
@@ -186,18 +203,20 @@ const EchartsDragDemo = ()=>{
    
   }
 
-  // function showTooltip(dataIndex) {
-  //   myChart.current.dispatchAction({
-  //     type: 'showTip',
-  //     seriesIndex: 0,
-  //     dataIndex: dataIndex
-  //   });
-  // }
-  // function hideTooltip(dataIndex) {
-  //   myChart.current.dispatchAction({
-  //     type: 'hideTip'
-  //   });
-  // }
+  function showTooltip(dataIndex) {
+    const chartInstance = myChartRef.current.getInstance();
+    chartInstance.dispatchAction({
+      type: 'showTip',
+      seriesIndex: 0,
+      dataIndex: dataIndex
+    });
+  }
+  function hideTooltip(dataIndex) {
+    const chartInstance = myChartRef.current.getInstance();
+    chartInstance.dispatchAction({
+      type: 'hideTip'
+    });
+  }
 
   // function updatePosition() {
   //   myChart.current.setOption({
