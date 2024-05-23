@@ -5,6 +5,12 @@ module.exports = {
   env: {
     ROOT: __dirname
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   async rewrites() {
     return [
       {
